@@ -1,14 +1,23 @@
 * {
     background-color: rgb(33, 33, 33);
+    font-family: "Roboto", sans-serif;
     color: white;
 }
 
 .side {
     border: grey solid 1px;
     border-radius: 15px;
-    width: 30vw;
-    min-height: 30vw;
-    margin: 5px;
+    width: 47vw;
+    min-height: 96vh;
+    margin: 1vw;
+}
+
+.textBox {
+    margin: 15px;
+    width: calc(47vw - 30px);
+    min-height: calc(96vh - 30px);
+    border: none;
+    outline: none;
 }
 
 #sides {
