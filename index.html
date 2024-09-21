@@ -10,28 +10,29 @@
     <title>Markdown To HTML</title>
 </head>
 <body>
-    <table id="sides">
-        <tr>
-            <td></td>
-            <td>
-                <div id="viewMode">
+    <div id="orModeContainer">
+        <div id="orMode" class="switch">
+            <button onclick="vertical()">V</button>
+            <button onclick="horizontal()">H</button>
+            <div id="highlight" class="left"></div>
+        </div>
+    </div>
+    <div id="sides" class="vertical">
+        <div class="side">
+            <textarea type="text" id="markDownSide" class="textBox" oninput="updateFromMarkdown()" placeholder="type markdown here"></textarea>
+        </div>
+        <div class="side" id="htmlVis">
+            <div id="viewModeContainer">
+                <div id="viewMode" class="switch">
                     <button onclick="preview()">Preview</button>
                     <button onclick="viewCode()">Code</button>
-                    <div id="highlight" class="preview"></div>
+                    <div id="highlight" class="left"></div>
                 </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="side">
-                <textarea type="text" id="markDownSide" class="textBox" oninput="updateFromMarkdown()" placeholder="type markdown here"></textarea>
-            </td>
-            <td class="side" id="htmlVis">
-                <div id="htmlSide" class="textBox"></div>
-                <textarea type="html" id="codeSide" class="textBox" oninput="updateFromHTML()" placeholder="type html code here"></textarea>
-            </td>
-        </tr>
-    </table>
-
+            </div>
+            <div id="htmlSide" class="textBox"></div>
+            <textarea type="html" id="codeSide" class="textBox" oninput="updateFromHTML()" placeholder="type html code here"></textarea>
+        </div>
+    </div>
 </body>
 <script src="script/markdownToHTML.js"></script>
 <script src="script/HTMLtoMarkdown.js"></script>

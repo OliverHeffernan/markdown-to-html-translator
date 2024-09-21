@@ -11,6 +11,7 @@
     margin: 1vw;
     overflow-y: scroll;
     height: 90vh;
+    display: block;
 }
 
 .textBox {
@@ -21,19 +22,33 @@
     outline: none;
 }
 
-#sides {
+.vertical {
     display: flex;
 }
 
-#viewMode {
+.vertical .side {
+    width: 47vw;
+}
+
+.horizontal {
+    display: inline-block;
+}
+
+.horizontal .side {
+    width: 97vw;
+    height: calc(47vh - 30px);
+}
+
+.switch {
     background: none;
     border-radius: 10px;
     border: grey solid 1px;
     display: inline-flex;
     position: relative;
+    left:0;
 }
 
-#viewMode button {
+.switch button {
     background: none;
     border: none;
     padding: 10px;
@@ -41,22 +56,22 @@
     z-index: 1;
 }
 
-#viewMode #highlight {
+.switch #highlight {
     position: absolute;
+    transition: all 0.2s;
     background-color: grey;
     height: 100%;
     width: 50%;
     top: 0;
     border-radius: 9px;
     z-index: 0;
-    transition: all 0.2s;
 }
 
-#viewMode .preview {
+.switch .left {
     left: 0;
 }
 
-#viewMode .viewCode {
+.switch .right {
     left: 50%;
 }
 
