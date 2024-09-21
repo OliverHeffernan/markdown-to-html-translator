@@ -1,0 +1,16 @@
+* {
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+
+.side {
+    border: grey solid 1px;
+    border-radius: 15px;
+    width: 30vw;
+    min-height: 30vw;
+    margin: 5px;
+}
+
+#sides {
+    display: flex;
+}
