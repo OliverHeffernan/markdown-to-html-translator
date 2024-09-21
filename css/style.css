@@ -35,7 +35,8 @@
 }
 
 .horizontal .side {
-    width: 97vw;
+    margin: 1vw;
+    width: 96vw;
     height: calc(47vh - 30px);
 }
 
@@ -77,4 +78,8 @@
 
 #codeSide {
     display: none;
+}
+
+#viewModeContainer {
+    position: sticky;
 }
