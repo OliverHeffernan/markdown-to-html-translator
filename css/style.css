@@ -8,14 +8,15 @@
     border: grey solid 1px;
     border-radius: 10px;
     width: 47vw;
-    min-height: 96vh;
     margin: 1vw;
+    overflow-y: scroll;
+    height: 90vh;
 }
 
 .textBox {
     margin: 3px;
     width: calc(47vw - 30px);
-    min-height: calc(96vh - 30px);
+    height: calc(90vh - 30px);
     border: none;
     outline: none;
 }
