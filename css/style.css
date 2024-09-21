@@ -17,7 +17,7 @@
 .textBox {
     margin: 3px;
     width: calc(47vw - 30px);
-    height: calc(90vh - 30px);
+    height: calc(100% - 30px);
     border: none;
     outline: none;
 }
@@ -28,6 +28,7 @@
 
 .vertical .side {
     width: 47vw;
+    height: calc(100vh - 2vw - 96px);
 }
 
 .horizontal {
@@ -81,5 +82,10 @@
 }
 
 #viewModeContainer {
-    position: sticky;
+    position: fixed;
+    background: none;
+}
+
+#htmlSide, #codeSide {
+    margin-top: 40px;
 }
