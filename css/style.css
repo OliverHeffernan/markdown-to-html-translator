@@ -6,14 +6,14 @@
 
 .side {
     border: grey solid 1px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 47vw;
     min-height: 96vh;
     margin: 1vw;
 }
 
 .textBox {
-    margin: 15px;
+    margin: 3px;
     width: calc(47vw - 30px);
     min-height: calc(96vh - 30px);
     border: none;
@@ -22,4 +22,43 @@
 
 #sides {
     display: flex;
+}
+
+#viewMode {
+    background: none;
+    border-radius: 10px;
+    border: grey solid 1px;
+    display: inline-flex;
+    position: relative;
+}
+
+#viewMode button {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    z-index: 1;
+}
+
+#viewMode #highlight {
+    position: absolute;
+    background-color: grey;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    border-radius: 9px;
+    z-index: 0;
+    transition: all 0.2s;
+}
+
+#viewMode .preview {
+    left: 0;
+}
+
+#viewMode .viewCode {
+    left: 50%;
+}
+
+#codeSide {
+    display: none;
 }

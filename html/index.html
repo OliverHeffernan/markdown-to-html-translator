@@ -10,15 +10,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="sides">
-        <div class="side">
-            <textarea type="text" id="markDownSide" class="textBox" oninput="update()" placeholder="type markdown here"></textarea>
-        </div>
-        <div class="side">
-            <div id="htmlSide" class="textBox"></div>
-        </div>
-    </div>
+    <table id="sides">
+        <tr>
+            <td></td>
+            <td>
+                <div id="viewMode">
+                    <button onclick="preview()">Preview</button>
+                    <button onclick="viewCode()">Code</button>
+                    <div id="highlight" class="preview"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="side">
+                <textarea type="text" id="markDownSide" class="textBox" oninput="updateFromMarkdown()" placeholder="type markdown here"></textarea>
+            </td>
+            <td class="side" id="htmlVis">
+                <div id="htmlSide" class="textBox"></div>
+                <textarea type="html" id="codeSide" class="textBox" oninput="updateFromHTML()"></textarea>
+            </td>
+        </tr>
+    </table>
 
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/markdownToHTML.js"></script>
+<script src="../script/HTMLtoMarkdown.js"></script>
+<script src="../script/navigation.js"></script>
 </html>

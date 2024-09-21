@@ -13,7 +13,7 @@ function markdownToHTML(m) {
             }
         }
         if (!heading) {
-            h += `${lines[i]}<br/>`;
+            h += `${lines[i]}<br/>\n`;
         }
     }
 
@@ -25,11 +25,12 @@ function markdownToHTML(m) {
 }
 
 function headingFromLine(line, level) {
-    return `<h${level}>${line.substring(level + 1, line.length)}</h${level}>`;
+    return `<h${level}>${line.substring(level + 1, line.length)}</h${level}>\n`;
 }
 
-function update() {
+function updateFromMarkdown() {
     document.getElementById("htmlSide").innerHTML = markdownToHTML(document.getElementById("markDownSide").value);
+    document.getElementById("codeSide").value = markdownToHTML(document.getElementById("markDownSide").value);
 }
 
 function replaceEvenOccurrence(str, pattern, tag) {
