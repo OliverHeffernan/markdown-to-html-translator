@@ -2,6 +2,7 @@ function markdownToHTML(m) {
     let h = "";
 
     let lines = m.split(/\n/);
+    console.log(lines);
 
     for (var i = 0; i < lines.length; i++) {
         let heading = false;
