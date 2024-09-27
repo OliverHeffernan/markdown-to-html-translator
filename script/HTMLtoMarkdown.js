@@ -6,10 +6,11 @@ function HTMLtoMarkdown(h) {
     for (let i = 0; i < seReplace.length; i++) {
         console.log(`</${seReplace[i][0]}>`);
         m = m.replaceAll(`<${seReplace[i][0]}>`, seReplace[i][1]);
+        m = m.replaceAll(`</${seReplace[i][0]}>\n`, "\n");
         m = m.replaceAll(`</${seReplace[i][0]}>`, "\n");
     }
 
-    let fReplace = [["<b>", "**"], ["</b>", "**"], ["<em>", "*"], ["</em>", "*"]];
+    let fReplace = [["<b>", "**"], ["</b>", "**"], ["<em>", "*"], ["</em>", "*"], ["<br />", "\n"], ["<br>", "\n"]];
     for (let i = 0; i < fReplace.length; i++) {
         m = m.replaceAll(fReplace[i][0], fReplace[i][1]);
     }
